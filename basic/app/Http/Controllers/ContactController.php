@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ContactController extends Controller
 {
     public function index(){
-        echo "This is our Contact page";
+        return view('contact');
     }
 }
