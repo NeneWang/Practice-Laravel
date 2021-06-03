@@ -43,7 +43,7 @@
                 <br>
                 <a href="{{url('/')}}">Home</a> | 
                 <a href="{{URL::to('/about')}}">About</a> |
-                <a href="">Contact</a> |
+                <a href="{{route('con')}}">Contact</a> |
 
 
                     <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">

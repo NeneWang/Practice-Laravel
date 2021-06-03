@@ -19,5 +19,5 @@ Route::get('/about', function () {
 })->middleware('check');
 
 // Route::get('/contact', 'ContactController@index');
-Route::get('/contact', [ContactController::class, 'index']);
+Route::get('/contact', [ContactController::class, 'index'])->name('con');
 
