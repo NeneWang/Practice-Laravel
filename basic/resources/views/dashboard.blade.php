@@ -1,7 +1,10 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            Hi.. <b>{{Auth::user()->name}}</b>
+            <b style="float:right;" >Total Users
+            <span class="badge badge-danger"  > {{count($users)}} </span></b>
+
         </h2>
     </x-slot>
 
@@ -25,7 +28,7 @@
       <th scope="row">{{$i++}}</th>
       <td>{{$user->name}}</td>
       <td>{{$user->email}}</td>
-      <td>{{$user->created_at->diffForHumans()}}</td>
+      <td>{{Carbon\Carbon::parse($user->created_at)->diffForHumans()}}</td>
     </tr>
 
     @endforeach
